@@ -7,7 +7,7 @@ async def main():
         page = await browser.new_page()
         await page.goto("https://en.wikipedia.org/wiki/Playwright_(software)")
         print(await page.title())
-        browser.close()
+        await browser.close()
 
 
 asyncio.run(main())
