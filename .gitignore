@@ -1,0 +1,7 @@
+
+*.pyc
+/test-results
+test-results
+**/test-results/**
+/screenshots
+/logs
