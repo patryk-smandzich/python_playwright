@@ -13,10 +13,10 @@ async def main():
         await page.check("[class=\"rct-checkbox\"]")
         await page.screenshot(path="screenshots/checkboxes.png")
 
-        await page.is_checked("[class=\"rct-checkbox\"]")
+        await page.is_checked("[class=\"rct-checkbox\"]") is True
         await expect(page.locator("#result span:first-child")).to_have_text("You have selected :")
 
-        await context.tracing.stop(path="logs/trace.zip")
+        await context.tracing.stop(path="logs/traceCheckboxes.zip")
 
         await browswer.close()
 
