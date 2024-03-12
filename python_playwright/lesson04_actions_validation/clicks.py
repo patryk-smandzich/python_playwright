@@ -25,9 +25,9 @@ async def main():
         await page.screenshot(path="screenshots/buttons.png")
 
         #assertions
-        await expect(clickMeCheck).to_have_text("You have done a double click")
+        await expect(clickMeCheck).to_have_text("You have done a dynamic click")
         await expect(rightClickMeCheck).to_have_text("You have done a right click")
-        await expect(doubleClickMeCheck).to_have_text("You have done a dynamic click")
+        await expect(doubleClickMeCheck).to_have_text("You have done a double click")
 
         await context.tracing.stop(path="logs/traceClicks.zip")
 
