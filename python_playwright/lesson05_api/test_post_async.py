@@ -5,8 +5,7 @@ async def run(playwright: Playwright):
     api_request_context = await playwright.request.new_context(base_url="http://localhost:3000/")
     data = {
         "completed": False,
-        "title": "do next tutorial tomorrow!",
-        "id": "500",
+        "title": "do next tutorial tomorrow!"
     }
 
     response = await api_request_context.post("/todos", data=data)
